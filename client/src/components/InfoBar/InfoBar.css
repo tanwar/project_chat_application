@@ -2,10 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #2979FF;
+  /*background: #2979FF;*/
   border-radius: 4px 4px 0 0;
   height: 60px;
   width: 100%;
+
+  color: rgb(255, 255, 255);
+  background: linear-gradient(135deg, rgb(42, 39, 218) 0%, rgb(0, 204, 255) 100%);
 }
 
 .leftInnerContainer {
@@ -25,4 +28,13 @@
 
 .onlineIcon {
   margin-right: 5%;
+}
+
+.avator-text{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: flex-start;
 }

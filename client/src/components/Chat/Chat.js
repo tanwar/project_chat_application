@@ -6,22 +6,39 @@ import TextContainer from '../TextContainer/TextContainer';
 import Messages from '../Messages/Messages';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
+import { Fab } from "@material-ui/core";
+
+import {botChat} from '../../test-data/test-data';
 
 import './Chat.css';
 
-const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
+//const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
+const ENDPOINT = 'http://localhost:5000/';
 
 let socket;
+
+const style = {
+  margin: 0,
+  top: 'auto',
+  right: 20,
+  bottom: 20,
+  left: 'auto',
+  position: 'fixed',
+  color: "secondary",
+  areaLabel: 'edit'
+};
 
 const Chat = ({ location }) => {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
+  const [chatVisible, setChatVisible] = useState('');
+  const [showModal, setShowModal] = useState('');
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    const { name, room } = queryString.parse(location.search);
+    const { name, room } = botChat;
 
     socket = io(ENDPOINT);
 
@@ -53,14 +70,24 @@ const Chat = ({ location }) => {
     }
   }
 
+  const toggleChat = () => {
+    console.log(chatVisible);
+    setChatVisible(!chatVisible);
+  }
+
+  
+
   return (
     <div className="outerContainer">
-      <div className="container">
-          <InfoBar room={room} />
+      {chatVisible && <div className="container" style={style}>
+          <InfoBar toggleChat={toggleChat} room={room} />
           <Messages messages={messages} name={name} />
           <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
-      </div>
-      <TextContainer users={users}/>
+      </div>}
+      {/*<TextContainer users={users}/>*/}
+      {!chatVisible && <Fab style={style} onClick = {toggleChat}>
+        ABC
+      </Fab>}
     </div>
   );
 }
