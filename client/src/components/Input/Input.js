@@ -22,7 +22,7 @@ const Input = ({ setMessage, sendMessage, message }) => (
       onChange={({ target: { value } }) => setMessage(value)}
       onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
     />
-    <Fab style={style} onClick ={e => sendMessage(e)}><SendSharpIcon/></Fab>
+    <Fab id="sendButton" style={style} onMouseOver="" className="fabStyleClass" onClick ={e => sendMessage(e)}><SendSharpIcon /></Fab>
   </form>
 )
 

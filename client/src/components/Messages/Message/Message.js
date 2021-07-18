@@ -54,8 +54,9 @@ const Message = ({ message: { text, user }, name }) => {
     isSentByCurrentUser = true;
   }
 
-  const handleClick = (link) => {
-    console.log('link', link);
+  const handleClick = (link, text) => {
+    console.log('log', text, link);
+    window.open("http://www.google.com", "_blank");
   }
 
   return (
@@ -78,7 +79,7 @@ const Message = ({ message: { text, user }, name }) => {
       ><div>
         {text}</div>
       </Modal></div>}
-      {text === 'link' && <Chip avatar={<Avatar src="https://material-ui.com/static/images/avatar/3.jpg" />} label={text} onClick={e => handleClick(e)} />}
+      {text === 'link' && <Chip avatar={<Avatar src="https://material-ui.com/static/images/avatar/3.jpg" />} label={text} onClick={e => handleClick(e, text)} />}
     </div>
         </div>
         )

@@ -29,6 +29,17 @@ const style = {
   areaLabel: 'edit'
 };
 
+const fabStyle = {
+  margin: 0,
+  top: 'auto',
+  right: 20,
+  bottom: 20,
+  left: 'auto',
+  position: 'fixed',
+  color: "secondary",
+  areaLabel: 'edit',
+};
+
 const Chat = ({ location }) => {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
@@ -86,7 +97,7 @@ const Chat = ({ location }) => {
           <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
       </div>}
       {/*<TextContainer users={users}/>*/}
-      {!chatVisible && <Fab style={style} onClick = {toggleChat}>
+      {!chatVisible && <Fab style={fabStyle} className="fabStyleClass" onClick = {toggleChat}>
         <ChatBubbleIcon/>
       </Fab>}
     </div>

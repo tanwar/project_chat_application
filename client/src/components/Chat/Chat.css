@@ -33,3 +33,21 @@
     width: 50%;
   }
 }
+
+.fabStyle {
+  margin: 0;
+  top: 'auto';
+  right: 20;
+  bottom: 20;
+  left: 'auto';
+  position: 'fixed';
+  color: "secondary";
+}
+
+.fabStyleClass {
+  color: rgb(0, 125, 252);
+    background: linear-gradient(
+135deg
+, rgb(42, 39, 218), rgb(0, 204, 255));
+    box-shadow: rgb(0 77 255 / 50%) 0px 4px 24px;
+}

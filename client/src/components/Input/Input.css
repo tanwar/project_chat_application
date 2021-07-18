@@ -28,3 +28,23 @@ input:focus, textarea:focus, select:focus{
   height: auto !important;
   /*font-size: 1.0em;*/
 }
+
+.sendButtonFab {
+  color: #fff !important;
+  background: #2979FF;
+  border: none;
+}
+
+.fabStyleClass {
+  color: rgb(255, 255, 255) !important;
+    background: linear-gradient(
+135deg
+, rgb(42, 39, 218), rgb(0, 204, 255));
+    box-shadow: rgb(0 77 255 / 50%) 0px 4px 24px;
+}
+
+#sendButton:hover{
+  color: rgb(0, 125, 252) !important;
+  background: rgb(255, 255, 255) !important;
+  box-shadow: rgb(0 77 255 / 24%) 0px 8px 32px !important;
+}
