@@ -7,6 +7,7 @@ import Messages from '../Messages/Messages';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import { Fab } from "@material-ui/core";
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 
 import {botChat} from '../../test-data/test-data';
 
@@ -86,7 +87,7 @@ const Chat = ({ location }) => {
       </div>}
       {/*<TextContainer users={users}/>*/}
       {!chatVisible && <Fab style={style} onClick = {toggleChat}>
-        ABC
+        <ChatBubbleIcon/>
       </Fab>}
     </div>
   );

@@ -4,11 +4,17 @@
   justify-content: space-between;
   /*background: #2979FF;*/
   border-radius: 4px 4px 0 0;
-  height: 60px;
+  height: 80px;
   width: 100%;
 
   color: rgb(255, 255, 255);
   background: linear-gradient(135deg, rgb(42, 39, 218) 0%, rgb(0, 204, 255) 100%);
+  border-radius: 20px 20px 0px 0px;
+  /*box-shadow: rgb(0 18 46 / 16%) 0px 8px 36px 0px;
+  border-bottom-left-radius:0%;
+  border-bottom-right-radius:0%;*/
+  position: relative;
+  z-index: 4;
 }
 
 .leftInnerContainer {
@@ -37,4 +43,17 @@
 	justify-content: space-around;
 	align-items: center;
 	align-content: flex-start;
+}
+
+.banner {
+  background: linear-gradient(135deg, rgb(42, 39, 218) 0%, rgb(0, 204, 255) 100%);
+  box-shadow: rgb(0 18 46 / 16%) 0px 8px 36px 0px;
+  height: 48%;
+}
+
+.info-message {
+  position: absolute;
+  color: white;
+  padding: 20px 0 0 15px;
+  font-size: large;
 }
