@@ -78,7 +78,7 @@ const Message = ({ message: { text, user }, name }) => {
       ><div>
         {text}</div>
       </Modal></div>}
-      {text === 'link' && <Chip avatar={<Avatar src="https://material-ui.com/static/images/avatar/3.jpg" />} label={text} onClick={handleClick} />}
+      {text === 'link' && <Chip avatar={<Avatar src="https://material-ui.com/static/images/avatar/3.jpg" />} label={text} onClick={e => handleClick(e)} />}
     </div>
         </div>
         )

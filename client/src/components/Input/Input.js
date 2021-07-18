@@ -1,6 +1,7 @@
 import React from 'react';
 import SendSharpIcon from '@material-ui/icons/SendSharp';
 import './Input.css';
+import { Fab } from "@material-ui/core";
 
 const style = {
   margin: 0,
@@ -21,7 +22,7 @@ const Input = ({ setMessage, sendMessage, message }) => (
       onChange={({ target: { value } }) => setMessage(value)}
       onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
     />
-    <SendSharpIcon className="sendButton" onClick={e => sendMessage(e)}/>
+    <Fab style={style} onClick ={e => sendMessage(e)}><SendSharpIcon/></Fab>
   </form>
 )
 
